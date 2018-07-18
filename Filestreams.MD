@@ -16,7 +16,7 @@ instead of `MultiByteFileStream`
 
 ## Code conversion
 
-In this section, we will present the most common examples of file stream usages. for simplicity, errors are not handled.
+In this section, we will present the most common examples of file stream usages. For simplicity, errors are not handled.
 
 ### Force creation of a new file and write a UTF-8 text
 
