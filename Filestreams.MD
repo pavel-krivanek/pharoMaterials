@@ -10,7 +10,7 @@ steps and removes usages of the old API from the kernel.
 - do not use `FileStream` class
 - `'file.txt' asFileReference readStream` and similar methods now return an instance of `ZnCharacterReadStream`
 instead of `MultiByteFileStream`
-- 'file.txt' asFileReference readStream` and similar methods now return an instance of `ZnCharacterWriteStream` 
+- `'file.txt' asFileReference writeStream` and similar methods now return an instance of `ZnCharacterWriteStream` 
 instead of `MultiByteFileStream`
 - the new API has more clear separation between binary and text files
 
