@@ -20,9 +20,13 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   in Pharo, everything is an object. This purity and uniformity in the system and language design makes Pharo clean and comfortable to learn.
 
+![oop.gif](img/oop.gif)
+
 ## Software as objects
 
 -   Pharo uses files for serialization of source codes but, by default, it does not use files to edit them. Instead of a text editor, it provides the tools to browse and modify the classes, methods, class comments and other program entities. So Pharo has a much better understanding of relations between them and allows easier navigation and refactorings
+
+![navigation.gif](img/navigation.gif)
 
 ## Simple language syntax
 
@@ -31,18 +35,26 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 -   easy to learn
 -   Pharo designed for messages passing without arguments ambiguity
 
+![postcard.png](img/postcard.png)
+
 ## Closures with non-local returns
 
 -   the closures in Pharo with non-local returns allow elegant implementation of control structures without need of defining them in the language itself. Pharo is a simple meta-language where the programmer has all features required for the writing of custom readable domain-specific languages
+
+![controlStructures.png](img/controlStructures.png)
 
 ## Immediate objects identity swapping
 
 -   in Pharo, you can easily replace an object with another one. All references to the old object in your running program will be replaced by references to the new object
 
+![become.gif](img/become.gif)
+
 ## Fast resumable exceptions
 
 -   Pharo provides advanced exceptions system that can do things like resuming from a raised exception with providing an alternative result so your program can recover from failures.
--   their fast speed allows them to be used for clean information-flow mechanisms�
+-   their fast speed allows them to be used for clean information-flow mechanisms
+
+![exceptions.gif](img/exceptions.gif)
 
 ## Live customizable objects inspection
 
