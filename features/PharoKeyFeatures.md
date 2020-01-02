@@ -60,6 +60,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   you can visualize your objects in many ways (textual form, graphical representation) and use it to inspect the state of your running program. Debuggers can use these visualizations to help you to your understanding
 
+![inspector.gif](img/inspector.gif)
+
 ## Run-time classes and objects migration
 
 -   Pharo can evolve while it lives. It is like an organism. You can do things like add or remove instance variables of classes that have already existing instances. All these living instances will be properly modified.
@@ -128,6 +130,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   to be more productive, the blacksmiths create custom tools for their tasks. The Pharo shares the same philosophy. It allows you to create naturally dedicated tools for better understanding of your problems and support you in faster development
 
+![moldable.png](img/moldable.gif)
+
 ## Optional complete object memory persistence
 
 -   all objects in the system can be stored at once in a platform-independent file named image. So you can, for example, save complete state of your program during debugging and restore it to try to find different execution path or alternative solution
@@ -138,7 +142,7 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 ## Iast objects serialization
 
--   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report�
+-   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
 
 ## Easy use of proxy objects
 
