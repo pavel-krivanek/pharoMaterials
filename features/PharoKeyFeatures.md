@@ -108,9 +108,10 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 ## First-class customizable instance variables
 
--   the metalinks allow the implementation of much smarter instance variables like variables that keep bidirectional managed references between two objects
+-   the metalinks allow the implementation of much smarter instance variables like variables that keep bidirectional managed references between two objects. A simple assignment then automatically updates the other side of the reference too. 
 
 ![slots.png](img/slots.png)
+![slots2.png](img/slots2.png)
 
 ## Customizable metaclasses
 
