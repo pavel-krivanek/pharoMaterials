@@ -88,23 +88,33 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 ## Fast objects enumeration
 
--   with the Pharo reflection, you can easily enumerate all existing instances of a particular class and investigate references to them. It is beneficial for memory leaks detection. It is an essential Pharo reflectivity feature
+-   with the Pharo reflection, you can easily enumerate all existing instances of a particular class and investigate references to them. It is beneficial for memory leaks detection. It is an essential Pharo reflectivity feature.
+
+![instances.png](img/instances.png)
 
 ## Objects as methods
 
 -   methods are objects and objects can serve as methods. In this case, the invoking of a method means that the object receives a special message. It may be used for example during the coverage testing. You replace all class methods with such proxy objects, and when called, these objects replace themselves with the original method and write this information to a log
 
+![methods.png](img/methods.png)
+
 ## Traits
 
 -   Pharo classes use single inheritance, but they can use stateful traits for sharing of behavior with other classes
 
+![traits.png](img/traits.png)
+
 ## Optional Green threads
 
--   Pharo includes own process management that allows using concurrent programming even on platforms that do not support it
+-   Pharo includes own process management that allows using concurrent programming even on platforms that do not support it.
+
+![processes.png](img/processes.png)
 
 ## AST metalinks
 
--   abstract syntax tree of methods can be extended by metalinks that enable to do additional operations before, after or instead of particular AST nodes. That allows the clean first-class implementation of features like breakpoints, coverage testing, slots etc.
+-   abstract syntax tree of methods can be extended by metalinks that enable to do additional operations before, after or instead of particular AST nodes. That allows the clean first-class implementation of features like breakpoints, coverage testing, variables that remember old values etc.
+
+![metalinks.png](img/metalinks.png)
 
 ## First-class customizable instance variables
 
@@ -117,9 +127,13 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   objects have classes and classes have classes too, the metaclasses. These metaclasses have a class too, and Pharo allows to use the custom ones. It allows having the implementation of language features like traits as standalone libraries without any direct support in the virtual machine.
 
+![metaclass.png](img/metaclass.png)
+
 ## Relatively low memory consumption
 
 -   Pharo, including the virtual machine, is very compact with fast startup time
+
+![memory.png](img/memory.png)
 
 ## Platform-independent user interface
 
@@ -143,17 +157,22 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   Pharo has advanced integrated Git support that goes beyond the standard level of files. You can merge your branches on the granularity of particular methods, browse their history, create pull-requests directly from the IDE and so on.
 
+![iceberg.png](img/iceberg.png)
+
 ## Fast objects serialization
 
 -   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
 
 ## Easy use of proxy objects
 
--   ability to easily create proxy objects - objects that process and resend all messages to another object, is essential to object-oriented languages
+-   ability to easily create proxy objects - objects that process and/or resend all messages to another object, is essential to object-oriented languages
 
 ## Simple connection to native libraries
 
 -   Pharo includes FFI interface that makes the creation of bindings to C libraries very straightforward
+
+![ffi.png](img/ffi.png)
+
 
 ## Rigid system nature
 
