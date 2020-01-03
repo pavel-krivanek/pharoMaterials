@@ -110,6 +110,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   the metalinks allow the implementation of much smarter instance variables like variables that keep bidirectional managed references between two objects
 
+![slots.png](img/slots.png)
+
 ## Customizable metaclasses
 
 -   objects have classes and classes have classes too, the metaclasses. These metaclasses have a class too, and Pharo allows to use the custom ones. It allows having the implementation of language features like traits as standalone libraries without any direct support in the virtual machine.
@@ -130,7 +132,7 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   to be more productive, the blacksmiths create custom tools for their tasks. The Pharo shares the same philosophy. It allows you to create naturally dedicated tools for better understanding of your problems and support you in faster development
 
-![moldable.png](img/moldable.gif)
+![moldable.gif](img/moldable.gif)
 
 ## Optional complete object memory persistence
 
@@ -140,7 +142,7 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   Pharo has advanced integrated Git support that goes beyond the standard level of files. You can merge your branches on the granularity of particular methods, browse their history, create pull-requests directly from the IDE and so on.
 
-## Iast objects serialization
+## Fast objects serialization
 
 -   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
 
