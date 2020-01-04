@@ -66,9 +66,13 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   Pharo can evolve while it lives. It is like an organism. You can do things like add or remove instance variables of classes that have already existing instances. All these living instances will be properly modified.
 
+![migration.gif](img/migration.gif)
+
 ## Dynamic inheritance
 
 -   you can change the definition of existing classes including changing of its superclass. To some selected object, you can simply assign different class and do similar operations. These capabilities are essential for the ability of the system to evolve without the need for restarts
+
+![inheritance.gif](img/inheritance.gif)
 
 ## Advanced fast multi-platform virtual machine with JIT, combined generational garbage collector, ephemerons, forwarders
 
@@ -173,7 +177,17 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
 
-![fuel.png](img/fuel.png)
+## Arithmetic precision
+
+-   Pharo can use fractions, scaled decimals, large integers and so on to work with numbers without loose of arithmetic precision.
+
+![numbers.gif](img/numbers.gif)
+
+## Simple connection to native libraries
+
+-   Pharo includes FFI interface that makes the creation of bindings to C libraries very straightforward
+
+![ffi.png](img/ffi.png)
 
 ## Easy use of proxy objects
 
@@ -189,3 +203,9 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 ## Rigid system nature
 
 -   in Pharo, the programmers have almost absolute freedom to customize the system and use many potentially dangerous features. On the other hand, most programmers will use them with deliberation because Pharo, by default, provides a powerful standard library and tools that shape the way how to use the system the right way. Instead of making the language strict, it guides the programmers to do the things right.
+
+## MIT license
+
+-   Pharo is distributed with non-viral open-source MIT license.
+
+![OSIApproved.png](img/OSIApproved.png)
