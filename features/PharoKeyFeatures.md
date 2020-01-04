@@ -9,7 +9,7 @@ It benefits from an elegant design that enables a relatively simple implementati
 -   in Pharo, the border between your program and IDE can be eliminated. That means that you may directly use your code for a visual representation of your data structures during debugging, easily modify the built-in tools to fit your needs etc.
 
 ![fusion.gif](img/fusion.gif)
->*on a breakpoint, use the custom circuit region visual representation in the debugger, run another debugger on a piece of code inside the original debugger, edit the circuit inside inside the debugger and continue in stepping*
+>*on a breakpoint, use the custom circuit region visual representation in the debugger, run another debugger on a piece of code inside the original debugger, edit the circuit inside the debugger and continue in stepping*
 
 ## Advanced run-time reflectivity
 
