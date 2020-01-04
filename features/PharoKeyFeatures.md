@@ -74,17 +74,25 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   Pharo uses a very fast virtual machine with many unique features that runs on Windows, macOS and Linux including the ARM processors
 
+![vm.png](img/vm.png)
+
 ## Virtual machine written mostly in the language itself
 
 -   for more natural understanding and debugging of the virtual machine, it is mostly written in Pharo
+
+![vmmaker.png](img/vmmaker.png)
 
 ## Easy call stack manipulation
 
 -   you can easily inspect, modify or serialize the call stack. This allows, among other things, much easier building of debugging tools
 
+![stack.png](img/stack.png)
+
 ## Continuations
 
--   call stack manipulation allows surprisingly easy implementation of continuations without the need for direct support of the virtual machine. The continuations are very handy for web development tasks and backtracking implementation
+-   call stack manipulation allows surprisingly easy implementation of continuations without the need for direct support of the virtual machine. The continuations are very handy for web development tasks and backtracking implementation.
+
+![continuation.png](img/continuation.png)
 
 ## Fast objects enumeration
 
@@ -139,6 +147,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   The default Pharo UI looks and behaves the same way on all platforms
 
+![web.png](img/web.png)
+
 ## Customizable compiler
 
 -   the compiler is written in Pharo, and you can modify it as anything else in the system. You can use completely different compilers for some of your classes
@@ -162,6 +172,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 ## Fast objects serialization
 
 -   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
+
+![fuel.png](img/fuel.png)
 
 ## Easy use of proxy objects
 
