@@ -1,6 +1,8 @@
 # Pharo key features
 
-Pharo benefits from an elegant design that enables a relatively simple implementation of many advanced programming techniques.
+Pharo is a pure object-oriented programming language and a powerful environment. For more details, see [http://pharo.org/](http://pharo.org).
+
+It benefits from an elegant design that enables a relatively simple implementation of many advanced programming techniques. This is the list of some of them:
 
 ## The optional fusion of a developed program and development environment
 
