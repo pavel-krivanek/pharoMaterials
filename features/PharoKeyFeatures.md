@@ -157,6 +157,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   the compiler is written in Pharo, and you can modify it as anything else in the system. You can use completely different compilers for some of your classes
 
+![opal.png](img/opal.png)
+
 ## Moldable development tools
 
 -   to be more productive, the blacksmiths create custom tools for their tasks. The Pharo shares the same philosophy. It allows you to create naturally dedicated tools for better understanding of your problems and support you in faster development
@@ -167,6 +169,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   all objects in the system can be stored at once in a platform-independent file named image. So you can, for example, save complete state of your program during debugging and restore it to try to find different execution path or alternative solution
 
+![persistence.gif](img/persistence.gif)
+
 ## Integrated Git support
 
 -   Pharo has advanced integrated Git support that goes beyond the standard level of files. You can merge your branches on the granularity of particular methods, browse their history, create pull-requests directly from the IDE and so on.
@@ -176,6 +180,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 ## Fast objects serialization
 
 -   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
+
+![fuel.png](img/fuel.png)
 
 ## Arithmetic precision
 
@@ -193,6 +199,8 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   ability to easily create proxy objects - objects that process and/or resend all messages to another object, is essential to object-oriented languages
 
+![iot.png](img/iot.png)
+
 ## Simple connection to native libraries
 
 -   Pharo includes FFI interface that makes the creation of bindings to C libraries very straightforward
@@ -204,8 +212,10 @@ Pharo benefits from an elegant design that enables a relatively simple implement
 
 -   in Pharo, the programmers have almost absolute freedom to customize the system and use many potentially dangerous features. On the other hand, most programmers will use them with deliberation because Pharo, by default, provides a powerful standard library and tools that shape the way how to use the system the right way. Instead of making the language strict, it guides the programmers to do the things right.
 
+![dangerous.png](img/dangerous.png)
+
 ## MIT license
 
--   Pharo is distributed with non-viral open-source MIT license.
+-   Pharo is distributed with non-viral open-source MIT license. The main Pharo repository is hosted on GitHub.
 
 ![OSIApproved.png](img/OSIApproved.png)
