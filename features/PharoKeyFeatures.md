@@ -126,110 +126,110 @@ It benefits from an elegant design that enables a relatively simple implementati
 -   Methods are objects and objects can serve as methods. In this case, the invoking of a method means that the object receives a special message. It may be used for example during the coverage testing. You replace all class methods with such proxy objects, and when called, these objects replace themselves with the original method and write this information to a log.
 
 ![methods.png](img/methods.png)
-> *to implement per-method coverage is matter of few lines of code*
+> *To implement per-method coverage is matter of few lines of code*
 
 ## Traits
 
--   Pharo classes use single inheritance, but they can use stateful traits for sharing of behavior with other classes
+-   Pharo classes use single inheritance, but they can use stateful traits for sharing of behavior with other classes.
 
 ![traits.png](img/traits.png)
-> *tree table uses stateful trait that extends its behavior with ability to have a context menu*
+> *Tree table uses a stateful trait that extends its behavior with the ability to have a context menu*
 
 ## Optional Green threads
 
 -   Pharo includes own process management that allows using concurrent programming even on platforms that do not support it.
 
 ![processes.png](img/processes.png)
-> *built-in Pharo manager of processes*
+> *Built-in Pharo process manager*
 
 ## AST metalinks
 
--   abstract syntax tree of methods can be extended by metalinks that enable to do additional operations before, after or instead of particular AST nodes. That allows the clean first-class implementation of features like breakpoints, coverage testing, variables that remember old values etc.
+-   Abstract syntax tree of methods can be extended by metalinks that enable doing additional operations before, after or instead of particular AST nodes. That allows the clean first-class implementation of features like breakpoints, coverage testing, variables that remember old values, etc.
 
 ![metalinks.png](img/metalinks.png)
-> *installation of a breakpoint on an AST node. Example bytecode of a method with breakpoint*
+> *Installation of a breakpoint on an AST node. Example bytecode of a method with breakpoint.*
 
 ## First-class customizable instance variables
 
--   the metalinks allow the implementation of much smarter instance variables like variables that keep bidirectional managed references between two objects. A simple assignment then automatically updates the other side of the reference too. 
+-   The metalinks allow the implementation of much smarter instance variables like variables that keep bidirectional managed references between two objects. A simple assignment then automatically updates the other side of the reference, too. 
 
 ![slots.png](img/slots.png)
 ![slots2.png](img/slots2.png)
-> *part of a general language meta-model that defines many-to-one relation between package and its owner. When you secify a class package with a simple assignment, the class is added to the child entities collection of the package automatically*
+> *Part of a general language meta-model that defines many-to-one relation between package and its owner. When you secify a class package with a simple assignment, the class is added to the child entities collection of the package automatically.*
 
 ## Customizable metaclasses
 
--   objects have classes and classes have classes too, the metaclasses. These metaclasses have a class too, and Pharo allows to use the custom ones. It allows having the implementation of language features like traits as standalone libraries without any direct support in the virtual machine.
+-   Objects have classes and classes have classes, too, the metaclasses. These metaclasses have a class, too, and Pharo allows using custom ones. It allows having the implementation of language features like traits as standalone libraries without any direct support in the virtual machine.
 
 ![metaclass.png](img/metaclass.png)
-> *metaclasses*
+> *Metaclasses*
 
 ## Relatively low memory consumption
 
--   Pharo, including the virtual machine, is very compact with fast startup time
+-   Pharo, including the virtual machine, is very compact with fast startup time.
 
 ![memory.png](img/memory.png)
-> *the Pharo IDE in the default configuration consuming 64MB of the physical memory*
+> *The Pharo IDE in the default configuration consuming 64MB of the physical memory*
 
 ## Platform-independent user interface
 
 -   The default Pharo UI looks and behaves the same way on all platforms
 
 ![web.png](img/web.png)
-> *Pharo running in a web browser in a virtual machine written in JavaScript. The UI is the very same*
+> *Pharo running in a web browser in a virtual machine written in JavaScript. The UI is the very same.*
 
 ## Customizable compiler
 
--   the compiler is written in Pharo, and you can modify it as anything else in the system. You can use completely different compilers for some of your classes
+-   The compiler is written in Pharo, and you can modify it as anything else in the system. You can use completely different compilers for some of your classes.
 
 ![opal.png](img/opal.png)
-> *you can browse and modify the compiler on the fly*
+> *You can browse and modify the compiler on the fly*
 
 ## Moldable development tools
 
--   to be more productive, the blacksmiths create custom tools for their tasks. The Pharo shares the same philosophy. It allows you to create naturally dedicated tools for better understanding of your problems and support you in faster development
+-   To be more productive, blacksmiths create custom tools for their tasks. Pharo shares the same philosophy. It allows you to create naturally dedicated tools for better understanding of your problems, supporting you in faster development
 
 ![moldable.gif](img/moldable.gif)
-> *write a small simple tool that shows differences between actual and automatically formatted codes inside the Pharo class Collection*
+> *Write a small simple tool that shows differences between actual and automatically formatted codes inside the Pharo class Collection*
 
 ## Optional complete object memory persistence
 
--   all objects in the system can be stored at once in a platform-independent file named image. So you can, for example, save complete state of your program during debugging and restore it to try to find different execution path or alternative solution
+-   All objects in the system can be stored at once in a platform-independent file named image. So you can, for example, save complete state of your program during debugging and restore it to try to find a different execution path or alternative solution.
 
 ![persistence.gif](img/persistence.gif)
-> *install a breakpoint, run the application, when the debugger appears, save the system state. Do some steps inside the debugger and then close Pharo. Recover the saved state and repeat the stepping*
+> *Install a breakpoint, run the application, and when the debugger appears, save the system state. Do some steps inside the debugger and then close Pharo. Recover the saved state and repeat the stepping.*
 
 ## Integrated Git support
 
--   Pharo has advanced integrated Git support that goes beyond the standard level of files. You can merge your branches on the granularity of particular methods, browse their history, create pull-requests directly from the IDE and so on.
+-   Pharo has advanced integrated Git support that goes beyond the standard level of files. You can merge your branches on the granularity of particular methods, browse their history, create pull-requests directly from the IDE, and so on.
 
 ![iceberg.png](img/iceberg.png)
-> *the buil-in Git manager named Iceberg*
+> *The built-in Git manager named Iceberg*
 
 ## Fast objects serialization
 
--   all objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
+-   All objects, including classes or running contexts, can be serialized to a file. You can, for example, store the state of a debugger with the content of current stack and attach it to the issue report.
 
 ![fuel.png](img/fuel.png)
-> *saving of a class stack to a file*
+> *Saving of a class stack to a file*
 
 ## Arithmetic precision
 
--   Pharo can use fractions, scaled decimals, large integers and so on to work with numbers without loose of arithmetic precision.
+-   Pharo can use fractions, scaled decimals, large integers and so on to work with numbers without loss of arithmetic precision.
 
 ![numbers.gif](img/numbers.gif)
 > *Pharo and the 0.30000000000000004 problem*
 
 ## Simple connection to native libraries
 
--   Pharo includes FFI interface that makes the creation of bindings to C libraries very straightforward
+-   Pharo includes an FFI interface that makes the creation of bindings to C libraries very straightforward.
 
 ![ffi.png](img/ffi.png)
-> *part of the GTK binding. The definitions are very natural*
+> *Part of the GTK binding. The definitions are very natural.*
 
 ## Easy use of proxy objects
 
--   ability to easily create proxy objects - objects that process and/or resend all messages to another object, is essential to object-oriented languages
+-   Ability to easily create proxy objects - objects that process and/or resend all messages to another object, is essential to object-oriented languages.
 
 ![iot.png](img/iot.png)
 
@@ -237,14 +237,14 @@ It benefits from an elegant design that enables a relatively simple implementati
 
 ## Rigid system nature
 
--   in Pharo, the programmers have almost absolute freedom to customize the system and use many potentially dangerous features. On the other hand, most programmers will use them with deliberation because Pharo, by default, provides a powerful standard library and tools that shape the way how to use the system the right way. Instead of making the language strict, it guides the programmers to do the things right.
+-   In Pharo, the programmers have almost absolute freedom to customize the system and use many potentially dangerous features. On the other hand, most programmers will use them with deliberation, because Pharo, by default, provides a powerful standard library and tools that shape how to use the system the right way. Instead of making the language strict, it guides the programmers to do things right.
 
 ![dangerous.png](img/dangerous.png)
 
-> *not all messages are safe to send...*
+> *Not all messages are safe to send...*
 
 ## MIT license
 
--   Pharo is distributed with non-viral open-source MIT license. The main Pharo repository is hosted on GitHub.
+-   Pharo is distributed with a non-viral open-source MIT license. The main Pharo repository is hosted on GitHub.
 
 ![OSIApproved.png](img/OSIApproved.png)
