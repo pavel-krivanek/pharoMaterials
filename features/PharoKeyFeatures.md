@@ -11,7 +11,7 @@ It benefits from an elegant design that enables a relatively simple implementati
 ![fusion.gif](img/fusion.gif)
 >*On a breakpoint, use the custom circuit region visual representation in the debugger, run another debugger on a piece of code inside the original debugger, edit the circuit inside the debugger and continue in stepping*
 
-## Advanced run-time reflectivity
+## Advanced run-time reflection
 
 -   Pharo exposes everything to the programmer. Every object in the system can be examined and changed with respect to the object encapsulation rules.
 -   Pharo can enumerate all objects that have reference to some object.
