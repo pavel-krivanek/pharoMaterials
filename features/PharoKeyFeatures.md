@@ -151,7 +151,7 @@ It benefits from an elegant design that enables a relatively simple implementati
 
 ## First-class customizable instance variables
 
--   The metalinks allow the implementation of much smarter instance variables like variables that keep bidirectional managed references between two objects. A simple assignment then automatically updates the other side of the reference, too. 
+-   Instance variables described by objects, too. This makes it easy to implement, for example, much smarter instance variables like variables that keep bidirectional managed references between two objects. A simple assignment then automatically updates the other side of the reference, too. 
 
 ![slots.png](img/slots.png)
 ![slots2.png](img/slots2.png)
