@@ -235,6 +235,13 @@ It benefits from an elegant design that enables a relatively simple implementati
 
 > *RaspberryPi GPIO ports displayed on a remote Pharo instance*
 
+## User interface themes
+
+-   Pharo supports custom user interface themes.
+![themes.png](img/themes.png)
+
+> *The light and dark theme*
+
 ## Rigid system nature
 
 -   In Pharo, the programmers have almost absolute freedom to customize the system and use many potentially dangerous features. On the other hand, most programmers will use them with deliberation, because Pharo, by default, provides a powerful standard library and tools that shape how to use the system the right way. Instead of making the language strict, it guides the programmers to do things right.
