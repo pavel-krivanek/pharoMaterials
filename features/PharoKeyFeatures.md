@@ -238,6 +238,7 @@ It benefits from an elegant design that enables a relatively simple implementati
 ## User interface themes
 
 -   Pharo supports custom user interface themes.
+
 ![themes.png](img/themes.png)
 
 > *The light and dark theme*
