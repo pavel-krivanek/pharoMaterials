@@ -102,7 +102,7 @@
 | Description                                              | Pharo Code                                    | JavaScript Code                     |
 |----------------------------------------------------------|-----------------------------------------------|-------------------------------------|
 | Test if number `x` is zero.                               | `x isZero`                                    | `x === 0`                           |
-| Test if number `x` is positive.                           | `x positive`                                  | `x > 0`                             |
+| Test if number `x` is positive.                           | `x positive`                                  | `x >= 0`                             |
 | Test if number `x` is strictly positive (greater than 0). | `x strictlyPositive`                          | `x > 0`                             |
 | Test if number `x` is negative.                           | `x negative`                                  | `x < 0`                             |
 | Test if number `x` is even.                               | `x even`                                      | `(x % 2) === 0`                     |
