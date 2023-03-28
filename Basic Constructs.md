@@ -95,4 +95,18 @@
 | Get the constructor function of an object. |  | `obj.constructor` |
 | Check if `anObject` is an instance of `Person`.          | `anObject isKindOf: Person.`           | `anObject instanceof Person;`           |
 | Check if `123` is of type `SmallInteger`.          | `123 isMemberOf: SmallInteger.`<br>`123 class == SmallInteger.`   | `typeof 123 === 'number';`         |
-| Check if `123` responds to the message `sqrt`.     | `123 respondsTo: #sqrt.`       
+| Check if `123` responds to the message `sqrt`.     | `123 respondsTo: #sqrt.`     
+
+## Number properties
+
+| Description                                              | Pharo Code                                    | JavaScript Code                     |
+|----------------------------------------------------------|-----------------------------------------------|-------------------------------------|
+| Test if number `x` is zero.                               | `x isZero`                                    | `x === 0`                           |
+| Test if number `x` is positive.                           | `x positive`                                  | `x > 0`                             |
+| Test if number `x` is strictly positive (greater than 0). | `x strictlyPositive`                          | `x > 0`                             |
+| Test if number `x` is negative.                           | `x negative`                                  | `x < 0`                             |
+| Test if number `x` is even.                               | `x even`                                      | `(x % 2) === 0`                     |
+| Test if number `x` is odd.                                | `x odd`                                       | `(x % 2) !== 0`                     |
+| Test if object `x` is an integer.                         | `x isInteger`                                 | `Number.isInteger(x)`               |
+| Test if object `x` is a float.                            | `x isFloat`                                   | `typeof x === 'number' && !Number.isInteger(x)` |
+| Test if object `x` is a number.                           | `x isNumber`                                  | `typeof x === 'number'`             |
