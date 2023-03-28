@@ -65,14 +65,14 @@
 
 | Description                                       | Pharo Code                         | JavaScript Code                    |
 |---------------------------------------------------|-----------------------------------|------------------------------------|
-| Check if `x` is equal to `y`.                      | `(x = y)`                         | `x == y;`                         |
-| Check if `x` is not equal to `y`.                  | `(x ~= y)`                        | `x !== y;`                         |
-| Check if `x` is identical to `y`.                  | `(x == y)`                        | `x === y;`                         |
-| Check if `x` is not identical to `y`.              | `(x ~~ y)`                        | `x !== y;`                         |
-| Check if `x` is greater than `y`.                  | `(x > y)`                         | `x > y;`                           |
-| Check if `x` is less than `y`.                     | `(x < y)`                         | `x < y;`                           |
-| Check if `x` is greater than or equal to `y`.      | `(x >= y)`                        | `x >= y;`                          |
-| Check if `x` is less than or equal to `y`.         | `(x <= y)`                        | `x <= y;`                          |
+| Check if `x` is equal to `y`.                      | `x = y`                         | `x == y;`                         |
+| Check if `x` is not equal to `y`.                  | `x ~= y`                        | `x !== y;`                         |
+| Check if `x` is identical to `y`.                  | `x == y`                        | `x === y;`                         |
+| Check if `x` is not identical to `y`.              | `x ~~ y`                        | `x !== y;`                         |
+| Check if `x` is greater than `y`.                  | `x > y`                         | `x > y;`                           |
+| Check if `x` is less than `y`.                     | `x < y`                         | `x < y;`                           |
+| Check if `x` is greater than or equal to `y`.      | `x >= y`                        | `x >= y;`                          |
+| Check if `x` is less than or equal to `y`.         | `x <= y`                        | `x <= y;`                          |
 
 ## Logical expressions
 
