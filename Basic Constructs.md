@@ -7,6 +7,8 @@
 | Statement separator                       | `.`                                                      | `;` or new line |
 | Automatic statement separator insertion   | no                                                      | yes |
 
+In JavaScript, Automatic Semicolon Insertion (ASI) is a feature that inserts semicolons implicitly at the end of certain statements when they are omitted, while in Pharo, there is no automatic statement separator insertion, and the dot (`.`) must be explicitly used to separate statements.
+
 ## Assignment
 
 | Description                               | Pharo                                                | JavaScript  |
@@ -17,20 +19,34 @@
 | Assign the value 6 to `x`, `y`, and `z`  | `x := y := z := 6.`         | `x = y = z = 6;`              |
 | Assign the result of `(y := 6) + 1` to `x`. Assign the value 6 to `y` | `x := (y := 6) + 1` | `x = (y = 6) + 1` |
 
-## Messages and Operators
+## Operators
 
 | Description                               | Pharo                                                | JavaScript  |
 |-------------------------------------------|----------------------------------------------------------|-----------------|
 | Operators | uses binary messages | Arithmetic:  `+` `-` `*` `/` `%` `**` <br> Comparison:  `==` `===` `!=` `!==` `<` `>` `<=` `>=` <br> Logical: `&&` `\|\|` <br> Bitwise:  `&` `\|` `^` `<<` `>>` `>>>` <br> String: `+` <br> Ternary/conditional: `? :` <br> Other: `,` `typeof` `instanceof` `in` `new` `void` `delete` `await`
 | Custom binary messages or operators | yes | no |
 | Allowed characters for custom binary messages or operators | `+` `-` `/` `*` `~` `<` `>` `=` `@` `,` `%` `\|` `&` `!` `?` `·` `÷` `±` `×` | |
-| Precedence levels | 1. Grouping: `( ... )`<br>2. Unary messages<br>3. Binary messages<br>4. Keyword messages<br>5. Assignment: `:=`|  1. Grouping: `( ... )`<br>2. Member Access: `object.property`, `object["property"]`<br>3. Computed Member Access: `array[index]`<br>4. new (with argument list): `new Constructor(...)`<br>5. Function Call: `function(arguments)`<br>6. Optional chaining: `object?.property`, `object?.[expression]`, `function?.(arguments)`<br>7. new (without argument list): `new Constructor`<br>8. Postfix Increment/Decrement: `variable++`, `variable--`<br>9. Prefix Increment/Decrement: `++variable`, `--variable`<br>10. Unary Plus/Minus: `+variable`, `-variable`<br>11. Bitwise NOT: `~variable`<br>12. Logical NOT: `!variable`<br>13. Exponentiation: `base ** exponent`<br>14. Multiplication, Division, Remainder: `*`, `/`, `%`<br>15. Addition, Subtraction: `+`, `-`<br>16. Bitwise Shift: `<<`, `>>`, `>>>`<br>17. Relational: `<`, `>`, `<=`, `>=`, `in`, `instanceof`<br>18. Equality: `==`, `!=`, `===`, `!==`<br>19. Bitwise AND: `&`<br>20. Bitwise XOR: `^`<br>21. Bitwise OR: `\|`<br>22. Logical AND: `&&`<br>23. Logical OR: `\|\|`<br>24. Nullish Coalescing: `??`<br>25. Ternary/Conditional: `? :`<br>26. Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `<<=`, `>>=`, `>>>=`, `&=`, `^=`, `\|=`<br>27. Comma: `,`
+| Custom binary messages limits | Not limited length<br>Not limited character combinations | 
 
-Pharo deos not have operators in usual sense, it uses binary messages and users can define own on any class.
+In Pharo, operators are not used in the conventional sense. Instead, binary messages are utilized and programmers have the freedom to create their own on any class. 
+
+### Precedence levels
 
 | Description                               | Pharo                                                | JavaScript  |
 |-------------------------------------------|----------------------------------------------------------|-----------------|
-| Booleans (`true`, `false`, `nil`)          | `*(Booleans)`                                            | `true`, `false`, `null` |
+| Mathematic-inspired precedence levels | mo | yes |
+| Precedence levels | 1. Grouping: `( ... )`<br>2. Unary messages<br>3. Binary messages<br>4. Keyword messages<br>5. Assignment: `:=`|  1. Grouping: `( ... )`<br>2. Member Access: `object.property`, `object["property"]`<br>3. Computed Member Access: `array[index]`<br>4. new (with argument list): `new Constructor(...)`<br>5. Function Call: `function(arguments)`<br>6. Optional chaining: `object?.property`, `object?.[expression]`,<br>`function?.(arguments)`<br>7. new (without argument list): `new Constructor`<br>8. Postfix Increment/Decrement: `variable++`, `variable--`<br>9. Prefix Increment/Decrement: `++variable`, `--variable`<br>10. Unary Plus/Minus: `+variable`, `-variable`<br>11. Bitwise NOT: `~variable`<br>12. Logical NOT: `!variable`<br>13. Exponentiation: `base ** exponent`<br>14. Multiplication, Division, Remainder: `*`, `/`, `%`<br>15. Addition, Subtraction: `+`, `-`<br>16. Bitwise Shift: `<<`, `>>`, `>>>`<br>17. Relational: `<`, `>`, `<=`, `>=`, `in`, `instanceof`<br>18. Equality: `==`, `!=`, `===`, `!==`<br>19. Bitwise AND: `&`<br>20. Bitwise XOR: `^`<br>21. Bitwise OR: `\|`<br>22. Logical AND: `&&`<br>23. Logical OR: `\|\|`<br>24. Nullish Coalescing: `??`<br>25. Ternary/Conditional: `? :`<br>26. Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`,<br>`<<=`, `>>=`, `>>>=`, `&=`, `^=`, `\|=`<br>27. Comma: `,`
+
+## Pseudo-variables and primitive values
+
+| Description                               | Pharo                                                | JavaScript  |
+|-------------------------------------------|----------------------------------------------------------|-----------------|
+| Boolean, truthy and falsy values         | `true` `false`                                            | `true`, `false`<br>`0` `''` `null` `undefined` |
+| Contextual object | `self`<br>used as `self message` | `this`<br>used as `this.message()` |
+| Superclass lookup modifer | `super`<br>used as `super message` | `super`<br>used as `super.message()`
+
+| Description                               | Pharo                                                | JavaScript  |
+|-------------------------------------------|----------------------------------------------------------|-----------------|
 | Dynamic array (`Array`)                    | `{ }`                                                    | `[ ]`           |
 | Block closures                             | `[ | ]`                                                  | `( )`           |
 | Cascade                                    | `;`                                                      | -               |
