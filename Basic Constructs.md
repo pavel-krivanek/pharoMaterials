@@ -1,5 +1,55 @@
 # Basic constructs in Pharo and JavaScript
 
+## Statement separator
+
+| Description                               | Pharo                                                | JavaScript  |
+|-------------------------------------------|----------------------------------------------------------|-----------------|
+| Statement separator                       | `.`                                                      | `;` or new line |
+| Automatic statement separator insertion   | no                                                      | yes |
+
+## Assignment
+
+| Description                               | Pharo                                                | JavaScript  |
+|-------------------------------------------|----------------------------------------------------------|-----------------|
+| Assignments | `:=`| `=` `+=` `-=` `*=` `/=` `%=`<br> `**=` `<<=` `>>=` `>>>=` `&=` `^=` `\|=`
+| Assignment is an expression | yes | yes | 
+| Assign the value 5 to `x`                | `x := 5.`         | `x = 5;`            |
+| Assign the value 6 to `x`, `y`, and `z`  | `x := y := z := 6.`         | `x = y = z = 6;`              |
+| Assign the result of `(y := 6) + 1` to `x`. Assign the value 6 to `y` | `x := (y := 6) + 1` | `x = (y = 6) + 1` |
+
+## Messages and Operators
+
+| Description                               | Pharo                                                | JavaScript  |
+|-------------------------------------------|----------------------------------------------------------|-----------------|
+| Operators | uses binary messages | Arithmetic:  `+` `-` `*` `/` `%` `**` <br> Comparison:  `==` `===` `!=` `!==` `<` `>` `<=` `>=` <br> Logical: `&&` `\|\|` <br> Bitwise:  `&` `\|` `^` `<<` `>>` `>>>` <br> String: `+` <br> Ternary/conditional: `? :` <br> Other: `,` `typeof` `instanceof` `in` `new` `void` `delete` `await`
+| Custom binary messages or operators | yes | no |
+| Allowed characters for custom binary messages or operators | `+` `-` `/` `*` `~` `<` `>` `=` `@` `,` `%` `\|` `&` `!` `?` `·` `÷` `±` `×` | |
+| Precedence levels | 1. Grouping: `( ... )`<br>2. Unary messages<br>3. Binary messages<br>4. Keyword messages<br>5. Assignment: `:=`|  1. Grouping: `( ... )`<br>2. Member Access: `object.property`, `object["property"]`<br>3. Computed Member Access: `array[index]`<br>4. new (with argument list): `new Constructor(...)`<br>5. Function Call: `function(arguments)`<br>6. Optional chaining: `object?.property`, `object?.[expression]`, `function?.(arguments)`<br>7. new (without argument list): `new Constructor`<br>8. Postfix Increment/Decrement: `variable++`, `variable--`<br>9. Prefix Increment/Decrement: `++variable`, `--variable`<br>10. Unary Plus/Minus: `+variable`, `-variable`<br>11. Bitwise NOT: `~variable`<br>12. Logical NOT: `!variable`<br>13. Exponentiation: `base ** exponent`<br>14. Multiplication, Division, Remainder: `*`, `/`, `%`<br>15. Addition, Subtraction: `+`, `-`<br>16. Bitwise Shift: `<<`, `>>`, `>>>`<br>17. Relational: `<`, `>`, `<=`, `>=`, `in`, `instanceof`<br>18. Equality: `==`, `!=`, `===`, `!==`<br>19. Bitwise AND: `&`<br>20. Bitwise XOR: `^`<br>21. Bitwise OR: `\|`<br>22. Logical AND: `&&`<br>23. Logical OR: `\|\|`<br>24. Nullish Coalescing: `??`<br>25. Ternary/Conditional: `? :`<br>26. Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=`, `**=`, `<<=`, `>>=`, `>>>=`, `&=`, `^=`, `\|=`<br>27. Comma: `,`
+
+Pharo deos not have operators in usual sense, it uses binary messages and users can define own on any class.
+
+| Description                               | Pharo                                                | JavaScript  |
+|-------------------------------------------|----------------------------------------------------------|-----------------|
+| Booleans (`true`, `false`, `nil`)          | `*(Booleans)`                                            | `true`, `false`, `null` |
+| Dynamic array (`Array`)                    | `{ }`                                                    | `[ ]`           |
+| Block closures                             | `[ | ]`                                                  | `( )`           |
+| Cascade                                    | `;`                                                      | -               |
+| Assignment and Keywords (`:=`, `ifTrue:`, `ifFalse:`, `whileTrue:`, etc.) | `:`                                         | `=`, `if`, `else`, `while`, etc. |
+| Symbol and Array (`#`, `#()`)              | `#`                                                      | -               |
+| String                                     | `' '`                                                    | `' '`          |
+| Character (`$`)                            | `$`                                                      | -               |
+| Comment                                    | `"`                                                      | `//`            |
+| Point creation                             | `@`                                                      | -               |
+| Character space (` `), tab (`\t`), carriage return (`\r`), and line feed (`\n`) | `blank (Character space), tab (Character tab), cr (Character space), lf (Character lf)` | ` `, `\t`, `\r`, `\n` |
+
+## Reserved words
+
+| Pharo Code                                               | JavaScript Code |
+|----------------------------------------------------------|-----------------|
+| `thisContext` `super` `self` `true` `false` `nil`| `abstract` `await` `boolean` `break` `byte` `case` `catch` `char` `class` `const` `continue` `debugger` `default` `delete` `do` `double` `else` `enum` `export` `extends` `false` `final` `finally` `float` `for` `function` `if` `implements` `import` `in` `instanceof` `int` `interface` `let` `long` `native` `new` `null` `package` `private` `protected` `public` `return` `short` `static` `super` `switch` `synchronized` `this` `throw` `throws` `transient` `true` `try` `typeof` `var` `void` `volatile` `while` `with` `yield` |
+
+
+
 ## Variables declaration
 | Description                               | Pharo Code                  | JavaScript Code               |
 |-------------------------------------------|-----------------------------|-------------------------------|
@@ -7,15 +57,6 @@
 | Declare variables `x`, `y`, and `z`      | `\| x y z \|`       | `let x, y, z;`      |
 | Declare and assign the value 5 to `x`    |               | `let x = 5;`                  |
 
-
-## Assignments
-| Description                               | Pharo Code                  | JavaScript Code               |
-|-------------------------------------------|-----------------------------|-------------------------------|
-| Assignment                     | `:=`          | `=`            |
-| Assign the value 5 to `x`                | `x := 5.`         | `x = 5;`            |
-| Assign the value 6 to `x`, `y`, and `z`  | `x := y := z := 6.`         | `x = y = z = 6;`              |
-| Assign the result of `(y := 6) + 1` to `x`. Assign the value 6 to `y` | `x := (y := 6) + 1.` | `let y = 6; x = y + 1;` |
-| Create a new instance of the `Object` class as `x` | `x := Object new.` | `let x = new Object();` |
 
 ## Boolean values
 
