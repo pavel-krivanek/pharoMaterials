@@ -73,6 +73,11 @@
 | Check if `x` is less than `y`.                     | `(x < y)`                         | `x < y;`                           |
 | Check if `x` is greater than or equal to `y`.      | `(x >= y)`                        | `x >= y;`                          |
 | Check if `x` is less than or equal to `y`.         | `(x <= y)`                        | `x <= y;`                          |
+
+## Logical expressions
+
+| Description                                       | Pharo Code                         | JavaScript Code                    |
+|---------------------------------------------------|-----------------------------------|------------------------------------|
 | Negate boolean value of `b`.                       | `b not.`                          | `!b;`                              |
 | Check if both conditions are true.                 | `(x < 5) & (y > 1).`              |               |
 | Check if at least one condition is true.           | `(x < 5) \| (y > 1).`              |             |
@@ -81,6 +86,13 @@
 | Check if both conditions are true or both false.   |  `(x < 5) eqv: (y > 1).` <br> `(x < 5) == (y > 1).`         | `(x < 5) === (y > 1);`             |
 | Check if one condition is true and the other is false. | `(x < 5) xor: (y > 1).`      | `(x < 5) !== (y > 1);`             |
 | Check if `5` is between `3` and `12` (inclusive).  | `5 between: 3 and: 12.`           | `5 >= 3 && 5 <= 12;`               |
-| Check if `123` is a subclass of `Number`.          | `anObject isKindOf: Person.`           | `anObject instanceof Person;`           |
-| Check if `123` is of type `SmallInteger`.          | `123 isMemberOf: SmallInteger.`   | `typeof 123 === 'number';`         |
+
+## Object type checking
+
+| Description                                       | Pharo Code                         | JavaScript Code                    |
+|---------------------------------------------------|-----------------------------------|------------------------------------|
+| Get the class of object `123`. | `123 class` |  |
+| Get the constructor function of an object. |  | `obj.constructor` |
+| Check if `anObject` is an instance of `Person`.          | `anObject isKindOf: Person.`           | `anObject instanceof Person;`           |
+| Check if `123` is of type `SmallInteger`.          | `123 isMemberOf: SmallInteger.`<br>`123 class == SmallInteger.`   | `typeof 123 === 'number';`         |
 | Check if `123` responds to the message `sqrt`.     | `123 respondsTo: #sqrt.`       
