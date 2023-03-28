@@ -81,6 +81,6 @@
 | Check if both conditions are true or both false.   |  `(x < 5) eqv: (y > 1).` <br> `(x < 5) == (y > 1).`         | `(x < 5) === (y > 1);`             |
 | Check if one condition is true and the other is false. | `(x < 5) xor: (y > 1).`      | `(x < 5) !== (y > 1);`             |
 | Check if `5` is between `3` and `12` (inclusive).  | `5 between: 3 and: 12.`           | `5 >= 3 && 5 <= 12;`               |
-| Check if `123` is a subclass of `Number`.          | `123 isKindOf: Number.`           | `123 instanceof Number;`           |
+| Check if `123` is a subclass of `Number`.          | `anObject isKindOf: Person.`           | `anObject instanceof Person;`           |
 | Check if `123` is of type `SmallInteger`.          | `123 isMemberOf: SmallInteger.`   | `typeof 123 === 'number';`         |
 | Check if `123` responds to the message `sqrt`.     | `123 respondsTo: #sqrt.`       
