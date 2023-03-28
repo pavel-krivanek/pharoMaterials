@@ -169,6 +169,8 @@
 
 ## Conversion
 
+| Description                               | Pharo Code                      | JavaScript Code                                      |
+|------------------------------------------|----------------------------------|------------------------------------------------------|
 | Convert `3.99` to an integer (result: `3`).                           | `3.99 asInteger`                      | `Math.trunc(3.99)`                         |
 | Convert `3.99` to a fraction (result: `399/100`).                     | `3.99 asFraction`                     | `new Fraction(3.99)`                       |
 | Convert `3` to a float (result: `3.0`).                               | `3 asFloat`                           | `3.0`                                      |
