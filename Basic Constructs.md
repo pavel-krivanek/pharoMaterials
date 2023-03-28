@@ -41,7 +41,7 @@ In Pharo, operators are not used in the conventional sense. Instead, binary mess
 
 | Description                               | Pharo                                                | JavaScript  |
 |-------------------------------------------|----------------------------------------------------------|-----------------|
-| Boolean, truthy and falsy values         | `true` `false`                                            | `true`, `false`<br>`0` `''` `null` `undefined` |
+| Boolean, truthy and falsy values         | `true` `false`                                            | `true` `false`<br>`0` `''` `null` `undefined` |
 | Contextual object | `self`<br>used as `self message` | `this`<br>used as `this.message()` |
 | Superclass lookup modifer | `super`<br>used as `super message` | `super`<br>used as `super.message()`
 
